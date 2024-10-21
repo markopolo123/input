@@ -37,7 +37,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with mdBook
-        working-directory: /docs
+        working-directory: ./docs
         run: |
           mdbook build -d book
           ls -la .
