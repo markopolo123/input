@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-defaults:
-  run:
-    working-directory: ./docs
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,6 +20,9 @@ jobs:
       - name: build book
         run: mdbook build
         working-directory: ./docs
+      - name: check path
+        run: ls
+        working-directory: .
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
