@@ -18,6 +18,8 @@ jobs:
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: 'latest'
+      - name: Install mdbook plugin
+        run: cargo install mdbook-d2 --locked
       - name: build book
         run: mdbook build
       - name: Deploy
