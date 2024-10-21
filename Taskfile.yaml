@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: "3"
+includes:
+  docs:
+    taskfile: ./docs/Taskfile.yaml
+    dir: ./docs
+tasks:
+  build:
+    cmds:
+      - docker build -t original -f some-app .
+    silent: true
+  validate:
+    cmds:
+      - pre-commit run --all-files
+    silent: true

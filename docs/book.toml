@@ -1,0 +1,15 @@
+[book]
+authors = ["Mark Sharpley"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Take Home"
+
+[preprocessor.d2]
+# layout engine for diagrams. See https://github.com/terrastruct/d2#plugins.
+# optional. default is "dagre".
+layout = "dagre"
+# whether to use inline svg when rendering.
+# if 'false', separate files will be generated in src/<output-dir> and referenced.
+# optional. default is 'true'
+inline = true
